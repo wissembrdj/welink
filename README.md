@@ -1,4 +1,4 @@
-# welink
+# WeLink
 WeLink is a Named Entity Disambiguation system for queries within Question Answering systems. WeLink exploits syntactic and semantic features of an entity to proceed to its disambiguation. 
 
 You can try [WeLink](http://193.194.84.136:8000/)
