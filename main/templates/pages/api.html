@@ -1,0 +1,65 @@
+﻿{% load static %}
+{% url 'main:presentation_welink' as presentation %}
+{% url 'main:api_welink' as api %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Welink - API</title>
+  </head>
+<style>
+#wrapper{
+  height:500px;
+}
+.navbar{
+  margin-bottom:0 !important;
+}
+</style>
+  <body >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <img src="{% static 'welink.png' %}" alt="Welink" width="4%" style="margin-right:10px;">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item ">
+	        <a class="nav-link" href="/">Demo</a>
+	      </li>
+	     	<li class="nav-item">
+	        <a class="nav-link" href="{{ presentation }}">Presentation</a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="{{ api }}">API<span class="sr-only">(current)</span></a>
+	      </li>
+	    </ul>
+	  </div>
+	 <img src="{% static 'logo-univ-constantine2.png' %}" alt="Welink" width="4%" style="margin-right:10px;">
+	  <img src="{% static 'logo-LIRE.jpg' %}" alt="Welink" width="3.3%" style="margin-right:10px;">
+	</nav>
+  <section id="api" style="padding:80px ;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>API</h2>
+		<p class="lead">Please follow the above details to use the WeLink REST API</p>
+		<div class="alert alert-secondary" role="alert"><br/>
+			<pre><code>curl -X POST -H "Content-Type: application/json" <br/>-d '{"query": "What are the books written by Jack London? " }' <br/>http://193.194.84.136:8000/api </code></pre>
+        
+		</div>
+	</div>
+      </div>
+    </div>
+  </section>
+  
+    <footer class="footer py-4 bg-dark navbar fixed-bottom">
+    <div class="container">
+      <p class="m-0 text-center text-white">Made By Wissem Bouarroudj</p>
+      <p class="m-0 text-center text-white">Copyright &copy; <a href="https://www.univ-constantine2.dz/" target="_blank">Université Abdehamid Mehri </a> - <a href="https://www.univ-constantine2.dz/laboratoires/lablire/" target="_blank">Laboratoire Lire  </a> </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  </body>
+</html>
+
