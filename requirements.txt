@@ -1,0 +1,6 @@
+Django
+Django framework rest api
+Django boostrap 4
+NLTK with wordnet, punkt, stopwords, averaged perceptron tagger
+scikit-learn
+SPARQQLwrapper
