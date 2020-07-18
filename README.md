@@ -3,7 +3,7 @@ WeLink is a Named Entity Disambiguation system for queries within Question Answe
 
 You can try [WeLink](http://193.194.84.136:8000/)
 
-## WeLink API
+## API
 The REST API of WeLink is accessible as follows:
 
 ```bash
