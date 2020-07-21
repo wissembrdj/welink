@@ -11,4 +11,12 @@ curl -X POST -H "Content-Type: application/json"
 -d '{"query": "What are the books written by Jack London? " }' 
 http://193.194.84.136:8000/api 
 ```
+## Usage
+In your cmd, use the next command inside the WeLink application folder:
+```bash
+python manage.py runserver 
+```
+and open the application in your browser at 120.0.0.1:8000
+
+
 
