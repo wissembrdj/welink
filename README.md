@@ -9,7 +9,7 @@ The REST API of WeLink is accessible as follows:
 ```bash
 curl -X POST -H "Content-Type: application/json" 
 -d '{"query": "What are the books written by Jack London? " }' 
-http://193.194.84.136:8000/api 
+http://193.194.84.136:8000/api/ 
 ```
 ## Usage
 After installing all the requirements, use the next command inside the WeLink application folder:
