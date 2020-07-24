@@ -132,10 +132,7 @@ with open('qald-7.json', encoding='UTF-8') as data_file:
                 writer = csv.writer(myFile, delimiter =";", lineterminator='\r')
                 writer.writerows(myData)  
     
-         
-        #resultats= Results(best_candidate)
-        #resultats_classified=resultats.message()
-        #print(resultats_classified)
+
 print("FALCON process completed")   
 
      
