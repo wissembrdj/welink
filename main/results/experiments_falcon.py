@@ -5,7 +5,7 @@ import requests
 import time
 import re
 import io
-import extract_entities.entities   
+from extract_entities import entities
 
 
 
