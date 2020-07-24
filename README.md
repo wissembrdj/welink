@@ -12,7 +12,7 @@ curl -X POST -H "Content-Type: application/json"
 http://193.194.84.136:8000/api 
 ```
 ## Usage
-In your cmd, use the next command inside the WeLink application folder:
+After installing all the requirements, use the next command inside the WeLink application folder:
 ```bash
 python manage.py runserver 
 ```
