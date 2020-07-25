@@ -55,8 +55,6 @@ def dumper(obj):
         return obj.__dict__
    
 class UserqueryApi(APIView):
-#     parser_classes = (PlainTextParser,)
-#     renderer_classes = [PlainTextRenderer]
     def post(self, request, format=None): 
         start_time = time.time()
         userquery= request.data
@@ -89,53 +87,3 @@ class UserqueryApi(APIView):
 
 
 
-#                 print(res[0].em.name, "candidate:", res[0].ec.ec_uri)  
-#     def post(self, request, format=None): 
-#         userquery= request.data
-#         results=[]
-#         try:    
-#             parsed_collection = NIFCollection.loads(userquery, format='turtle')
-#         except:
-#             print("Exception while reading request")
-#             return Response("")
-#                  
-#         
-#         for context in parsed_collection.contexts:
-#             results= Welink(userquery).userquerymodel()
-#             if results:
-#                 for res in results:
-#                     text = context.mention
-#                     mention = res[0].em.name
-#                     index_begin_mention = text.find(mention)
-#                     index_end_mention = index_begin_mention+len(mention)
-#                     context.add_phrase(
-#                             beginIndex=index_begin_mention,
-#                             endIndex=index_end_mention,
-#                             taIdentRef=res[0].ec.ec_uri,
-#                             )
-# #                 print(res[0].em.name, "candidate:", res[0].ec.ec_uri)
-#   
-#                  
-#         results= json.dumps(parsed_collection, default=dumper, indent=2)
-#         data = json.loads(results)  
-#         serilize_userquery= UserQuerySerializer(parsed_collection)
-#         serlized=PlainTextRenderer().render(serilize_userquery.data, )
-# #         return Response(parsed_collection)
-#         results = parsed_collection.dumps(format='turtle')
-#         return Response(serlized)
-
-#     def post(self, request, format=None): 
-#         userquery_json= request.data
-#         userquery= userquery_json['text']
-#         results= Welink(userquery).userquerymodel()
-#         if results:
-#             for res in results:
-#                 for mention in userquery_json['mentions']:
-#                     if res[0].em.name==mention['name']:
-#                         mention['uri']= res[0].ec.ec_uri
-#                     else:
-#                         mention['uri']= ""
-#         else:
-#             for mentions in userquery_json['mentions']:
-#                 mentions["uri"]=""         
-#         return Response(userquery_json)    
